@@ -18,4 +18,16 @@ If there was a file called `run` in the directory, there may be confusion when `
 
 ### The code provided to you for the test file starts with two lines, seemingly to append something to `sys.path`. What is the purpose of these lines?
 
-The second line appends the current working directory to the end of the `sys.path`. This allows the clockdeco\_param.py file to be imported starting with `bin` as the path, since the directory has already been set.    
+The second line appends the current working directory to the end of the `sys.path`. This allows the clockdeco\_param.py file to be imported starting with `bin` as the path, since the directory has already been set.   
+
+## Extra Credit
+
+### Execute sudo apt install tree, and use that application to print out the file and directory structure, just as it is shown in this document at the top.
+
+`tree -a -I 'lib|env|.git|.pytest_cache|__pycache__' /home/ubuntu/DS5111_FALL2023_SW2_Lab` 
+
+### do a pip list or pip freeze and call out versions of the pytest and pylint packages in your requirements.txt.
+
+Added to requirements.txt:
+pylint==2.17.5
+pytest==7.4.2
