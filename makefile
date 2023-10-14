@@ -6,8 +6,11 @@ env:
 	. env/bin/activate; pip install -r requirements.txt
 
 run:
-	. env/bin/activate; @python3 bin/clockdeco_param.py
+	@. env/bin/activate; python3 bin/clockdeco_param.py
 
 .PHONY: tests
 tests:
-	pytest -vv tests
+	. env/bin/activate; pytest -vv tests
+
+lint:
+	@. env/bin/activate; pylint bin/perceptron.py
